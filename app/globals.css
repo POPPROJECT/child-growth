@@ -1,4 +1,9 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap');
+
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -22,5 +27,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Sarabun', sans-serif;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md transition-transform hover:-translate-y-1;
+}
+
+.input {
+  @apply border px-3 py-2 rounded w-full;
 }
